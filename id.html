@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    
+    <!-- <script type="module" src="./script.js"></script> -->
+    <button id="button" onclick="runSculpture()">Run sculpture for 30s</button>
+    <progress value="0" max="30" id="progressBar"></progress>
+
+
+
+    <script type = "text/javascript">
+        function setRunning(running) {
+            var xhr = new XMLHttpRequest();
+            var pathArray = window.location.pathname.split('/');
+            xhr.open('PUT', pathArray[0], true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({run: running}));
+        }
+
+        function runSculpture() {
+            const button = document.querySelector('button');
+            setRunning(true);
+            button.disabled = true;
+    
+            var timeleft = 30;
+            var runningTimer = setInterval(function(){
+                if (timeleft <= 0){
+                    // disableRunning();
+                    button.disabled = false;
+                    document.getElementById("progressBar").value = 0;
+                    // setRunning(false);
+                    clearInterval(runningTimer);
+                    return
+                }
+                document.getElementById("progressBar").value = 30 - timeleft;
+                timeleft -= 1;
+            }, 1000);
+        }
+    </script>
