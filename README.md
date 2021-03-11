@@ -9,3 +9,9 @@ cd kinetic-sculpture-webapi
 npm install
 ```
 
+## Running
+
+```
+node server.js
+```
+
