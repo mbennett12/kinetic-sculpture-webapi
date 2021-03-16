@@ -3,6 +3,15 @@ Web API allowing students' kinetic sculptures to start simultaneously, for Barna
 
 ## Installation
 Clone this repo, then:
-`cd kinetic-sculpture-webapi`
-`npm install`
+
+```
+cd kinetic-sculpture-webapi
+npm install
+```
+
+## Running
+
+```
+node server.js
+```
 
