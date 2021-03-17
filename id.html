@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <title>Start your sculpture</title>
+
+    </head>    
+    <style>
+        * { 
+            box-sizing: border-box; 
+        } 
+        .center {
+            margin-top: 5%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            padding: 3%;
+        }
+    </style>
     <body>
     
-    <button id="button" onclick="runSculpture()">Run sculpture for 30s</button>
-    <progress value="0" max="30" id="progressBar"></progress>
+    <button id="button" onclick="runSculpture()" class="center">Run sculpture for 30s</button>
+    <progress id="progressBar" value="0" max="30" class="progress, center"></progress>
 
-
-
+    </body>
+    </html>
     <script type = "text/javascript">
         function setRunning(running) {
             var xhr = new XMLHttpRequest();
@@ -24,10 +48,8 @@
             var timeleft = 30;
             var runningTimer = setInterval(function(){
                 if (timeleft <= 0){
-                    // disableRunning();
                     button.disabled = false;
                     document.getElementById("progressBar").value = 0;
-                    // setRunning(false);
                     clearInterval(runningTimer);
                     return
                 }
