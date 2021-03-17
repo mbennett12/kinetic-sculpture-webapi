@@ -15,3 +15,11 @@ npm install
 node server.js
 ```
 
+## Example usage (python)
+
+```
+>>> import requests
+>>> should_i_run = requests.get('http://165.227.76.232:3000/myuni/running')
+>>> print(should_i_run.json())
+False
+```
