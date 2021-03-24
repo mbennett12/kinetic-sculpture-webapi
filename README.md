@@ -1,5 +1,9 @@
 # kinetic-sculpture-webapi
 Web API allowing students' kinetic sculptures to start simultaneously, for Barnard's COMS3930 Creative Embedded Systems
+
+The site is live at: http://165.227.76.232:3000/YOUR-UNI (though change the url to your uni for your unique page)
+and you can use http://165.227.76.232:3000/YOUR-UNI/running for true/false readings
+
 ## For students: 
 To use this server, change the "YOUR-UNI" part of the address to your uni, and query for true/false to run your sculpture.
 For example, in an arduino sketch loop, you might have:
