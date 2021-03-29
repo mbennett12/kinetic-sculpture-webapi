@@ -1,5 +1,6 @@
 # kinetic-sculpture-webapi
-Web API allowing students' kinetic sculptures to start simultaneously, for Barnard's COMS3930 Creative Embedded Systems.
+## About
+Web server/API allowing students' kinetic sculptures to start simultaneously, for Barnard's COMS3930 Creative Embedded Systems.
 
 This repo includes example code for setting your sculptures up to run from the web api, as well as the code for running the server yourself (which should not be necessary).
 
@@ -53,7 +54,7 @@ False
 ### Running the sculpture
 After setting your sculpture up to start upon receiving a "true" response from the webapi, go to http://165.227.76.232:3000/YOUR-UNI/ to find the button to make the webapi return true for 30s.
 
-## To set up and run the server (not necessary for students)
+## Running server (not necessary for students, as server already running)
 
 ### Installation
 Clone this repo, then:
