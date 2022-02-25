@@ -1,6 +1,5 @@
 // simple web server for starting kinectic sculptures through web
 // built by Max Bennett March 2021
-// edited Sept15th 2021 for COMS4156 ASE
 
 var http = require('http');
 var url = require('url');
